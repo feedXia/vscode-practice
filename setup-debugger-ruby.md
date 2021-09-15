@@ -6,7 +6,19 @@ _Disclaimer: I'm using a 2020 M1 MacBook Air, running on Mac OS Big Sur ver 11.3
 2. If you don't yet have a "launch.json" file, create one: [Link to creating the "launch.json" file!](https://code.visualstudio.com/docs/editor/debugging)
 3. In "launch.json": add the configuration named "Listen for rdebug-ide"
 4. Edit the configuration so it looks like this:
-5. Add another configuration for running your local Ruby files like this:
+ ```
+ {
+    "name": "Listen for rdebug-ide",
+    "type": "Ruby",
+    "request": "attach",
+    "remoteHost": "127.0.0.1",
+    "remotePort": "1234",
+    "remoteWorkspaceRoot": "${workspaceRoot}",
+    "cwd": "${workspaceRoot}"
+  },
+  ```
+
+6. Add another configuration for running your local Ruby files like this:
 
 ## Entering Inputs While Debugging (Ongoing)
 
